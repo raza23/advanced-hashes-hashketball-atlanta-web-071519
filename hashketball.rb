@@ -197,13 +197,18 @@ def player_stats(players_name)
 end
 
 def big_shoe_rebounds
+  
+  home_players=game_hash[:home][:players]
+  away_players=game_hash[:away][:players]
+  all_players = home_players.merge(away_players)
   binding.pry
-   shoe_size = 0
-   rebound = 0
-   game_hash.each do |team, team_data|
-      team_data[:players].each do |player|
-        player.each do |desc,stat|
-          desc.each do |value|
+  
+  #  shoe_size = 0
+  #  rebound = 0
+  #  game_hash.each do |team, team_data|
+  #     team_data[:players].each do |player|
+  #       player.each do |desc,stat|
+  #         desc.each do |value|
 
 
 
